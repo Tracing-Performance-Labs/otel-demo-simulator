@@ -5,10 +5,12 @@ import os
 
 import add_products_to_cart_workflow
 import list_product_information_workflow
+import complete_purchase_workflow
 
 WORKFLOWS = [
     add_products_to_cart_workflow,
-    list_product_information_workflow
+    list_product_information_workflow,
+    complete_purchase_workflow
 ]
 
 if __name__ == "__main__":
