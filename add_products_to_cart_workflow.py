@@ -14,7 +14,7 @@ def execute():
 
     for id in product_ids:
         res = requests.post(
-                'http://localhost:8080/api/cart?currencyCode=USD',
+                f'{common.get_otel_app_url()}/api/cart?currencyCode=USD',
                 json={ 'item': {"productId": id, "quantity": 1}, 
                         "userId": "c63e1dce-d089-4c89-bbd0-20c21a5e01e2" })
 

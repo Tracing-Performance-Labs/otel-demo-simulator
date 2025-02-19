@@ -16,7 +16,7 @@ def execute():
 
     product = random.choice(products)
     
-    res = requests.get("http://localhost:8080/api/products/" + product["id"] + "?currencyCode=USD")
+    res = requests.get(f"{common.get_otel_app_url()}/api/products/" + product["id"] + "?currencyCode=USD")
     if res.status_code != 200:
         logger.warn("Failed to get information for product: %s", product["id"])
     else:
