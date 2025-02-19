@@ -19,6 +19,6 @@ def execute():
                         "userId": "c63e1dce-d089-4c89-bbd0-20c21a5e01e2" })
 
         if res.status_code != 200:
-            logger.warn("Failed to add product to cart: %d %s %s", res.status_code, id)
+            logger.warn("Failed to add product to cart: %d %s", res.status_code, id)
         else:
             logger.debug("Added product to cart: %s", id)

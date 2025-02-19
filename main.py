@@ -3,10 +3,12 @@ import logging
 import sys
 import os
 
-import add_products
+import add_products_to_cart_workflow
+import list_product_information_workflow
 
 WORKFLOWS = [
-    add_products
+    add_products_to_cart_workflow,
+    list_product_information_workflow
 ]
 
 if __name__ == "__main__":
