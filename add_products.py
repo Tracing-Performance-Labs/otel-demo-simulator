@@ -1,19 +1,16 @@
 import requests
 import logging
 
+import common
+
 logger = logging.getLogger(__name__)
 
 def execute():
     """
     This workflow adds N products to the cart.
     """
-    res = requests.get('http://localhost:8080/api/products?currencyCode=USD')
-    if res.status_code != 200:
-        logger.warn("Failed to get product catalog")
-        return
-
-    json = res.json()
-    product_ids = [product["id"] for product in json]
+    products = common.list_products()
+    product_ids = [product["id"] for product in products]
 
     for id in product_ids:
         res = requests.post(
