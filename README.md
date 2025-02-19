@@ -1,3 +1,8 @@
+> [!NOTE]
+> Do not use this
+
+Turns out making the requests like this does not trigger trace emission.
+
 # OTEL Demo Simulator
 
 This repository contains various scripts that simulate actions
