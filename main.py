@@ -25,11 +25,16 @@ if __name__ == "__main__":
         format="[%(asctime)s] {%(filename)s:%(lineno)d} %(levelname)s - %(message)s"
     )
 
+    N = 0
+
     while True:
         try:
             n = random.randrange(len(WORKFLOWS))
             w = WORKFLOWS[n]
             logger.info(f"Executing workflow {w.__name__}")
             w.execute()
+            N += 1
         except KeyboardInterrupt:
             break
+
+    logger.info("Workflows executed: %d", N)
